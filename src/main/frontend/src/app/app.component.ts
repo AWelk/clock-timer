@@ -6,5 +6,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  time = {hour: 13, minute: 30};
+  spinners = true;
+
+  toggleSpinners() {
+    this.spinners = !this.spinners;
+  }
 }
