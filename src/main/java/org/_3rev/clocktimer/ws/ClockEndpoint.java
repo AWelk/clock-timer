@@ -15,7 +15,17 @@ public class ClockEndpoint {
     }
 
     @RequestMapping("/start")
-    public void sayHello(@RequestParam(value = "seconds") int seconds) throws InterruptedException {
+    public void startTimer(@RequestParam(value = "seconds") int seconds) {
         clockController.startTimer(seconds);
+    }
+
+    @RequestMapping("/pause")
+    public void pauseTimer() {
+        clockController.pause();
+    }
+
+    @RequestMapping("/continue")
+    public void continueTimer() {
+        clockController.unpause();
     }
 }
