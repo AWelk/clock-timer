@@ -51,6 +51,7 @@ public class Clock extends JFrame {
         int hours = timeInSeconds / SECONDS_IN_HOUR;
         int remainder = timeInSeconds - hours * SECONDS_IN_HOUR;
         int mins = remainder / SECONDS_IN_MINUTE;
+        remainder = timeInSeconds - mins * SECONDS_IN_MINUTE;
         int seconds = remainder;
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -90,7 +91,7 @@ public class Clock extends JFrame {
         }
 
         l.setFont(f.deriveFont(f.getStyle(), fontSize));
-        System.out.println(fontSize);
+//        System.out.println(fontSize);
         repaint();
     }
 
